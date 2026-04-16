@@ -4,6 +4,7 @@ import heroImg from '../assets/unnamed.png';
 import gal1 from '../assets/gambar 1.png';
 import gal2 from '../assets/gambar 2.png';
 import gal3 from '../assets/gambar 3.png';
+import jadwalImg from '../assets/jadwal.png';
 // This is an Astro component converted from Stitch HTML
 ---
 <!DOCTYPE html>
@@ -467,8 +468,8 @@ import gal3 from '../assets/gambar 3.png';
 <!-- Schedule Section -->
 <section class="py-24 bg-[#fdfaf1] relative overflow-hidden" id="jadwal">
 <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row gap-12 items-center">
-<div class="flex-1 w-full">
-<img alt="Student at desk" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] rounded-[3rem] shadow-2xl floating-element w-full h-[300px] md:h-[500px] object-cover border-8 border-white" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
+<div class="flex-1 w-full flex justify-center mb-10 md:mb-0">
+<img alt="Jadwal MEC.SID" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] rounded-[2rem] md:rounded-[3rem] shadow-2xl w-full max-w-[500px] h-auto object-contain border-4 md:border-8 border-white bg-white" src={jadwalImg.src}/>
 </div>
 <div class="flex-1 w-full space-y-8">
 <div class="space-y-4">
@@ -495,11 +496,27 @@ import gal3 from '../assets/gambar 3.png';
 <h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-headline font-black text-tertiary text-xl mb-4 flex items-center gap-3">
 <span class="material-symbols-outlined text-3xl font-bold">school</span> JADWAL BIMBEL (SD/SMP/SMA)
                             </h4>
-<div class="p-4 bg-tertiary/10 rounded-xl inline-block border border-tertiary/20 mb-4">
-<p class="text-tertiary font-black flex items-center gap-2">
-<span class="material-symbols-outlined font-bold">event_available</span>
-                                    Jadwal Fleksibel, Hubungi Kami!
-                                </p>
+<div class="flex flex-col gap-4 mb-4">
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<div class="flex items-center gap-3 text-on-surface font-bold w-48">
+<span class="material-symbols-outlined text-tertiary font-bold">calendar_month</span>
+<span>Senin &amp; Kamis</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-tertiary font-bold">schedule</span>
+<span>13.00 - 19.30</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<div class="flex items-center gap-3 text-on-surface font-bold w-48">
+<span class="material-symbols-outlined text-tertiary font-bold">calendar_month</span>
+<span>Selasa &amp; Jumat</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-tertiary font-bold">schedule</span>
+<span>13.00 - 19.00</span>
+</div>
+</div>
 </div>
 <p class="text-base text-on-surface font-bold italic leading-relaxed">Menyesuaikan dengan jadwal sekolah &amp; ketersediaan kelas privat agar tetap efektif.</p>
 </div>
