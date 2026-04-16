@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html class="light" lang="id"><head>
+<html class="light scroll-smooth" lang="id"><head>
+<title>MEC.SID - Kursus Calistung & Bimbel Sidoarjo</title>
+<link rel="icon" type="image/png" href="../../public/favicon.png" />
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Lexend:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -117,21 +119,44 @@
 <!-- TopNavBar -->
 <nav class="bg-white/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-surface-container">
 <div class="flex justify-between items-center w-full px-4 sm:px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black text-[#b60051] tracking-tight font-headline">MEC.SID</div>
+<a href="#" class="flex items-center gap-3">
+    <img src={logoImg.src} alt="MEC.SID Logo" class="h-8 sm:h-10 w-auto" />
+    <div class="text-2xl font-black text-[#b60051] tracking-tight font-headline"></div>
+</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="text-[#b60051] font-bold border-b-4 border-[#b60051] pb-1 font-label" href="#">Beranda</a>
-<a class="text-[#131e22] font-semibold hover:text-[#b60051] font-label transition-colors duration-300" href="#materi">Program</a>
-<a class="text-[#131e22] font-semibold hover:text-[#b60051] font-label transition-colors duration-300" href="#jadwal">Jadwal</a>
-<a class="text-[#131e22] font-semibold hover:text-[#b60051] font-label transition-colors duration-300" href="#tentang">Tentang</a>
+<a class="nav-link text-[#b60051] font-bold border-b-4 border-[#b60051] pb-1 font-label transition-all duration-300" href="#beranda">Beranda</a>
+<a class="nav-link text-[#131e22] font-semibold border-b-4 border-transparent hover:text-[#b60051] hover:border-[#b60051] pb-1 font-label transition-colors duration-300" href="#materi">Program</a>
+<a class="nav-link text-[#131e22] font-semibold border-b-4 border-transparent hover:text-[#b60051] hover:border-[#b60051] pb-1 font-label transition-colors duration-300" href="#jadwal">Jadwal</a>
+<a class="nav-link text-[#131e22] font-semibold border-b-4 border-transparent hover:text-[#b60051] hover:border-[#b60051] pb-1 font-label transition-colors duration-300" href="#contact">Contact</a>
 </div>
-<button class="bg-primary text-on-primary text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-label font-bold hover:bg-primary-dim transition-all shadow-md active:scale-95">
+<div class="flex items-center gap-3">
+<a href="https://wa.me/6281232444792" target="_blank" class="hidden md:inline-block bg-primary text-on-primary text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-label font-bold hover:bg-primary-dim transition-all shadow-md active:scale-95 text-center">
                 Daftar Sekarang
-            </button>
+            </a>
+<button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface focus:outline-none">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+</button>
+</div>
 </div>
 </nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col pt-24 px-8 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden shadow-xl border-b border-surface-container">
+    <div class="flex flex-col gap-6 text-center">
+        <a class="mobile-nav-link nav-link text-[#b60051] font-bold border-b-4 border-[#b60051] inline-block mx-auto pb-1 text-2xl font-label transition-all duration-300" href="#beranda">Beranda</a>
+        <a class="mobile-nav-link nav-link text-[#131e22] font-semibold border-b-4 border-transparent inline-block mx-auto pb-1 hover:text-[#b60051] hover:border-[#b60051] text-2xl font-label transition-colors duration-300" href="#materi">Program</a>
+        <a class="mobile-nav-link nav-link text-[#131e22] font-semibold border-b-4 border-transparent inline-block mx-auto pb-1 hover:text-[#b60051] hover:border-[#b60051] text-2xl font-label transition-colors duration-300" href="#jadwal">Jadwal</a>
+        <a class="mobile-nav-link nav-link text-[#131e22] font-semibold border-b-4 border-transparent inline-block mx-auto pb-1 hover:text-[#b60051] hover:border-[#b60051] text-2xl font-label transition-colors duration-300" href="#contact">Contact</a>
+        <a href="https://wa.me/6281232444792" target="_blank" class="bg-primary text-white text-xl py-4 rounded-full font-label font-bold hover:bg-primary-dim transition-all shadow-md active:scale-95 w-full max-w-[250px] mx-auto mt-4 text-center block">
+            Daftar Sekarang
+        </a>
+    </div>
+</div>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden grid-paper">
+<section id="beranda" class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden grid-paper">
 <div class="absolute inset-0 z-0 bg-gradient-to-b from-surface via-surface/80 to-transparent"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 flex flex-col md:flex-row items-center gap-20 sm:gap-12">
 <div class="flex-1 w-full space-y-8">
@@ -171,7 +196,7 @@
 <div class="flex-1 w-full relative">
 <div class="relative w-full h-80 sm:h-auto sm:aspect-square max-w-lg mx-auto mt-16 sm:mt-0">
 <div class="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-[4rem] border-4 border-dashed border-primary/30 p-8 shadow-inner">
-<img alt="Students studying together" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-[3rem] floating-element" src="../../public/beranda-lengkap.jpg"/>
+<img alt="Students studying together" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-[3rem] floating-element" src={heroImg.src}/>
 </div>
 <div class="absolute z-20 -top-8 sm:-top-10 -right-2 sm:-right-10 w-20 h-20 sm:w-32 sm:h-32 bg-tertiary rounded-full flex items-center justify-center animate-pulse floating-element rotate-12 shadow-xl">
 <span class="material-symbols-outlined text-5xl text-white">school</span>
@@ -190,8 +215,8 @@
 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-4xl text-primary font-bold" style="font-variation-settings: 'FILL' 1;">assignment</span>
 </div>
-<h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-headline font-extrabold text-2xl mb-3 text-on-surface">Laporan Bulanan</h4>
-<p class="text-on-surface font-medium text-base">Update rutin perkembangan akademik ananda setiap bulan kepada orang tua secara transparan.</p>
+<h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-headline font-extrabold text-2xl mb-3 text-on-surface">Belajar Sesuai Kemampuan</h4>
+<p class="text-on-surface font-medium text-base">Ada tes penempatan di awal masuk. Anak akan dibimbing perlahan dari kemampuan dasarnya sampai benar-benar mahir, bahkan bisa melampaui materi kelasnya.</p>
 </div>
 <div class="flex flex-col items-center text-center p-8 bg-tertiary-container/40 rounded-3xl -rotate-1 border border-tertiary/10 shadow-sm hover:shadow-md transition-shadow">
 <div class="w-20 h-20 bg-tertiary/10 rounded-full flex items-center justify-center mb-6">
@@ -268,10 +293,7 @@
 <span class="material-symbols-outlined text-tertiary text-sm font-bold">language</span>
 <span class="text-sm font-bold text-on-surface">B. Inggris</span>
 </div>
-<div class="bg-surface-container p-3 rounded-xl flex items-center gap-2 border border-surface-container-high">
-<span class="material-symbols-outlined text-tertiary text-sm font-bold">translate</span>
-<span class="text-sm font-bold text-on-surface">B. Indonesia</span>
-</div>
+
 </div>
 <p class="text-sm text-on-surface font-bold mt-auto italic">Siap menghadapi Ulangan Harian dan Ujian Semester dengan percaya diri.</p>
 </div>
@@ -290,44 +312,31 @@
 <span class="material-symbols-outlined text-secondary font-bold">trending_up</span>
 </div>
 <div class="bg-surface-container p-4 rounded-xl flex items-center justify-between border border-surface-container-high">
-<span class="text-sm font-black text-on-surface">Fisika / Kimia / Biologi</span>
+<span class="text-sm font-black text-on-surface">Fisika & Bahasa Inggris</span>
 <span class="material-symbols-outlined text-secondary font-bold">science</span>
 </div>
 </div>
-<p class="text-sm text-on-surface font-bold mt-auto">Fokus pada strategi jitu pengerjaan soal UTBK dan persiapan masuk PTN impian.</p>
+<p class="text-sm text-on-surface font-bold mt-auto">Fokus pendalaman materi UTS, UAS, Ujian Sekolah, beserta pengenalan strategi persiapan PTN & Kedinasan.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Learning Journey Section -->
-<section class="py-24 bg-white relative">
-<div class="max-w-7xl mx-auto px-4 sm:px-8">
-<div class="text-center mb-16">
-<h2 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] text-3xl sm:text-4xl font-headline font-extrabold text-on-surface">3 Langkah Mudah Mulai Belajar</h2>
-<div class="w-16 h-1.5 bg-primary mx-auto mt-4 rounded-full"></div>
+<!-- Instagram Embed Section -->
+<section class="py-16 bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto px-4 sm:px-8 text-center">
+<div class="mb-10 space-y-2">
+<h2 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] text-3xl sm:text-4xl font-headline font-extrabold text-primary">Keseruan di MEC.SID!</h2>
+<p class="text-on-surface font-black text-lg">Tonton langsung dari Instagram kami</p>
 </div>
-<div class="flex flex-col md:flex-row justify-between items-center gap-8 relative">
-<!-- Progress Line -->
-<div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-primary/10 -z-0"></div>
-<div class="z-10 bg-white p-6 md:p-8 rounded-full border-[6px] border-primary shadow-xl w-56 h-56 md:w-64 md:h-64 flex flex-col items-center justify-center text-center floating-element">
-<span class="text-5xl font-black text-primary mb-2">01</span>
-<h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-black mb-2 uppercase text-sm tracking-widest text-on-surface">Daftar</h4>
-<p class="text-xs text-on-surface-variant font-bold leading-relaxed">Hubungi Admin via WA untuk pendaftaran awal yang cepat.</p>
-</div>
-<div class="z-10 bg-white p-6 md:p-8 rounded-full border-[6px] border-tertiary shadow-xl w-56 h-56 md:w-64 md:h-64 flex flex-col items-center justify-center text-center floating-element">
-<span class="text-5xl font-black text-tertiary mb-2">02</span>
-<h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-black mb-2 uppercase text-sm tracking-widest text-on-surface">Trial &amp; Assessment</h4>
-<p class="text-xs text-on-surface-variant font-bold leading-relaxed">Sesi percobaan gratis untuk mengetahui tingkat kemampuan ananda.</p>
-</div>
-<div class="z-10 bg-white p-6 md:p-8 rounded-full border-[6px] border-secondary shadow-xl w-56 h-56 md:w-64 md:h-64 flex flex-col items-center justify-center text-center floating-element">
-<span class="text-5xl font-black text-secondary mb-2">03</span>
-<h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-black mb-2 uppercase text-sm tracking-widest text-on-surface">Mulai Belajar</h4>
-<p class="text-xs text-on-surface-variant font-bold leading-relaxed">Penentuan jadwal tetap dan mulai petualangan belajar seru!</p>
-</div>
+<div class="flex flex-col md:flex-row flex-wrap gap-8 justify-center items-center md:items-start w-full mx-auto">
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C1mJuGsvDRq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:1rem; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:340px !important; min-width:280px !important; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C1mJuGsvDRq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C1mJuGsvDRq/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by mecsid gedangan sidoarjo (@mecsidgedangansidoarjo)</a></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4IJqH0P1ZE/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:1rem; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:340px !important; min-width:280px !important; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C4IJqH0P1ZE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C4IJqH0P1ZE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by mecsid gedangan sidoarjo (@mecsidgedangansidoarjo)</a></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1l97n4PtkW/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:1rem; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:340px !important; min-width:280px !important; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/C1l97n4PtkW/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C1l97n4PtkW/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by mecsid gedangan sidoarjo (@mecsidgedangansidoarjo)</a></p></div></blockquote>
 </div>
 </div>
 </section>
+
 <!-- Gallery Section -->
 <section class="py-24 bg-surface grid-paper overflow-hidden">
 <div class="max-w-7xl mx-auto px-4 sm:px-8">
@@ -335,22 +344,18 @@
 <h2 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] text-3xl sm:text-4xl font-headline font-extrabold text-primary">Galeri Belajar Kita</h2>
 <p class="text-on-surface font-black text-lg">Melihat keseruan belajar sehari-hari di MEC.SID</p>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
 <div class="relative group aspect-square">
 <div class="absolute inset-0 scrapbook-tape -top-2 left-1/4 w-1/2 h-4 z-10"></div>
-<img alt="Learning fun" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
+<img alt="Learning fun" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500" src={gal1.src}/>
 </div>
 <div class="relative group aspect-[4/5] mt-8">
 <div class="absolute inset-0 scrapbook-tape -top-2 left-1/4 w-1/2 h-4 z-10"></div>
-<img alt="Classroom vibes" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[3deg] group-hover:rotate-0 transition-transform duration-500" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
+<img alt="Classroom vibes" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[3deg] group-hover:rotate-0 transition-transform duration-500" src={gal2.src}/>
 </div>
 <div class="relative group aspect-square">
 <div class="absolute inset-0 scrapbook-tape -top-2 left-1/4 w-1/2 h-4 z-10"></div>
-<img alt="Teacher and student" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[-1deg] group-hover:rotate-0 transition-transform duration-500" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
-</div>
-<div class="relative group aspect-video md:aspect-square mt-4">
-<div class="absolute inset-0 scrapbook-tape -top-2 left-1/4 w-1/2 h-4 z-10"></div>
-<img alt="Happy faces" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[4deg] group-hover:rotate-0 transition-transform duration-500" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
+<img alt="Teacher and student" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-full object-cover rounded-xl border-4 sm:border-[10px] border-white shadow-xl rotate-[-1deg] group-hover:rotate-0 transition-transform duration-500" src={gal3.src}/>
 </div>
 </div>
 </div>
@@ -367,7 +372,13 @@
 <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full max-w-xs bg-primary p-6 sm:p-8 rounded-[2rem] sm:rounded-[3rem] rounded-bl-none relative floating-element shadow-lg">
 <p class="text-white font-bold italic leading-relaxed">"Anak saya jadi semangat belajar calistung. Metodenya nggak ngebosenin dan gurunya sangat sabar sekali!"</p>
 <div class="mt-6 flex items-center gap-3">
-<div class="w-10 h-10 bg-white/20 rounded-full border border-white/30"></div>
+<div class="flex text-yellow-300 drop-shadow-md">
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
 <span class="font-black text-sm text-white">Mama Arkan (TK B)</span>
 </div>
 </div>
@@ -375,7 +386,13 @@
 <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full max-w-xs bg-secondary p-6 sm:p-8 rounded-[2rem] sm:rounded-[3rem] rounded-br-none mt-12 relative floating-element shadow-lg">
 <p class="text-white font-bold italic leading-relaxed">"Sangat membantu untuk persiapan ujian sekolah. Nilai Matematika anak saya meningkat drastis sejak bimbel di sini."</p>
 <div class="mt-6 flex items-center gap-3">
-<div class="w-10 h-10 bg-white/20 rounded-full border border-white/30"></div>
+<div class="flex text-yellow-300 drop-shadow-md">
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
 <span class="font-black text-sm text-white">Papa Radit (SMP Kelas 8)</span>
 </div>
 </div>
@@ -383,7 +400,13 @@
 <div class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full max-w-xs bg-tertiary p-6 sm:p-8 rounded-[2rem] sm:rounded-[3rem] rounded-bl-none relative floating-element shadow-lg">
 <p class="text-white font-bold italic leading-relaxed">"Kelasnya nyaman, AC-nya dingin, lingkungannya bersih. Anak jadi betah belajar berlama-lama tanpa mengeluh."</p>
 <div class="mt-6 flex items-center gap-3">
-<div class="w-10 h-10 bg-white/20 rounded-full border border-white/30"></div>
+<div class="flex text-yellow-300 drop-shadow-md">
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+ <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
 <span class="font-black text-sm text-white">Bunda Sari (SD Kelas 4)</span>
 </div>
 </div>
@@ -400,10 +423,10 @@
 <div class="space-y-4">
 <details class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] group bg-white rounded-2xl p-6 shadow-md border-2 border-transparent open:border-primary transition-all cursor-pointer">
 <summary class="flex justify-between items-center font-black text-xl list-none text-on-surface">
-                            Apakah bisa mencoba trial terlebih dahulu?
+                            Apakah anak akan dites dulu sebelum masuk?
                             <span class="material-symbols-outlined group-open:rotate-180 transition-transform font-bold text-primary">expand_more</span>
 </summary>
-<p class="mt-4 text-on-surface font-semibold leading-relaxed border-t border-surface-container pt-4">Tentu! Kami menyediakan 1x sesi trial gratis untuk calon siswa agar bisa merasakan langsung suasana belajar yang menyenangkan di MEC.SID.</p>
+<p class="mt-4 text-on-surface font-semibold leading-relaxed border-t border-surface-container pt-4">Ya, siswa baru akan mengikuti Tes Penempatan terlebih dahulu. Tujuannya agar guru bisa memberikan level materi yang pas sesuai dengan kemampuan dasar anak saat ini.</p>
 </details>
 <details class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] group bg-white rounded-2xl p-6 shadow-md border-2 border-transparent open:border-primary transition-all cursor-pointer">
 <summary class="flex justify-between items-center font-black text-xl list-none text-on-surface">
@@ -417,7 +440,7 @@
                             Berapa jumlah maksimal siswa per kelas?
                             <span class="material-symbols-outlined group-open:rotate-180 transition-transform font-bold text-primary">expand_more</span>
 </summary>
-<p class="mt-4 text-on-surface font-semibold leading-relaxed border-t border-surface-container pt-4">Untuk menjaga kualitas dan fokus bimbingan, kami menerapkan sistem semi-privat yang eksklusif dengan maksimal 3-5 siswa per sesi pertemuan.</p>
+<p class="mt-4 text-on-surface font-semibold leading-relaxed border-t border-surface-container pt-4">Sistem belajar kami adalah Semi Privat. Jumlah siswa per kelas sangat dibatasi agar guru bisa fokus mengajari anak satu per satu.</p>
 </details>
 </div>
 </div>
@@ -425,8 +448,8 @@
 <!-- Schedule Section -->
 <section class="py-24 bg-[#fdfaf1] relative overflow-hidden" id="jadwal">
 <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row gap-12 items-center">
-<div class="flex-1 w-full">
-<img alt="Student at desk" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] rounded-[3rem] shadow-2xl floating-element w-full h-[300px] md:h-[500px] object-cover border-8 border-white" src="https://placehold.co/600x600/d4ecf7/b60051.png?text=MEC.SID"/>
+<div class="flex-1 w-full flex justify-center mb-10 md:mb-0">
+<img alt="Jadwal MEC.SID" class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] rounded-[2rem] md:rounded-[3rem] shadow-2xl w-full max-w-[500px] h-auto object-contain border-4 md:border-8 border-white bg-white" src={jadwalImg.src}/>
 </div>
 <div class="flex-1 w-full space-y-8">
 <div class="space-y-4">
@@ -453,11 +476,27 @@
 <h4 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] font-headline font-black text-tertiary text-xl mb-4 flex items-center gap-3">
 <span class="material-symbols-outlined text-3xl font-bold">school</span> JADWAL BIMBEL (SD/SMP/SMA)
                             </h4>
-<div class="p-4 bg-tertiary/10 rounded-xl inline-block border border-tertiary/20 mb-4">
-<p class="text-tertiary font-black flex items-center gap-2">
-<span class="material-symbols-outlined font-bold">event_available</span>
-                                    Jadwal Fleksibel, Hubungi Kami!
-                                </p>
+<div class="flex flex-col gap-4 mb-4">
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<div class="flex items-center gap-3 text-on-surface font-bold w-48">
+<span class="material-symbols-outlined text-tertiary font-bold">calendar_month</span>
+<span>Senin &amp; Kamis</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-tertiary font-bold">schedule</span>
+<span>13.00 - 19.30</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<div class="flex items-center gap-3 text-on-surface font-bold w-48">
+<span class="material-symbols-outlined text-tertiary font-bold">calendar_month</span>
+<span>Selasa &amp; Jumat</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-tertiary font-bold">schedule</span>
+<span>13.00 - 19.00</span>
+</div>
+</div>
 </div>
 <p class="text-base text-on-surface font-bold italic leading-relaxed">Menyesuaikan dengan jadwal sekolah &amp; ketersediaan kelas privat agar tetap efektif.</p>
 </div>
@@ -466,16 +505,16 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="py-24 bg-surface text-center px-4 sm:px-8">
+<section id="contact" class="py-24 bg-surface text-center px-4 sm:px-8">
 <div class="max-w-4xl mx-auto space-y-12">
 <div class="space-y-6">
 <h2 class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] text-3xl sm:text-4xl md:text-6xl font-headline font-black text-primary">Ayo Gabung di MEC.SID!</h2>
 <p class="text-2xl text-on-surface font-extrabold">Pendaftaran Dibuka <span class="text-primary underline decoration-primary/30 underline-offset-8">Setiap Saat</span></p>
 </div>
 <div class="relative inline-block group">
-<button class="bg-primary text-white text-xl md:text-3xl px-8 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-[2rem] font-headline font-black shadow-[0_12px_0_rgb(120,0,40)] hover:shadow-[0_14px_0_rgb(120,0,40)] hover:-translate-y-1 active:translate-y-1 active:shadow-[0_6px_0_rgb(120,0,40)] transition-all">
+<a href="https://wa.me/6281232444792" target="_blank" class="inline-block bg-primary text-white text-xl md:text-3xl px-8 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-[2rem] font-headline font-black shadow-[0_12px_0_rgb(120,0,40)] hover:shadow-[0_14px_0_rgb(120,0,40)] hover:-translate-y-1 active:translate-y-1 active:shadow-[0_6px_0_rgb(120,0,40)] transition-all">
                         HUBUNGI KAMI SEKARANG!
-                    </button>
+                    </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12">
 <div class="bg-white p-6 rounded-2xl flex items-center gap-6 shadow-md border-2 border-transparent hover:border-primary transition-colors">
@@ -497,35 +536,38 @@
 </div>
 </div>
 </div>
+<div class="scroll-fade opacity-0 translate-y-10 transition-all duration-[800ms] w-full h-80 sm:h-96 mt-12 mb-8 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
+    <iframe src="https://maps.google.com/maps?q=MECSID%20BIMBEL&t=m&z=15&output=embed&iwloc=near" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps MECSID BIMBEL"></iframe>
+</div>
 </div>
 </section>
 </main>
 <!-- Footer -->
 <footer class="w-full flex flex-col items-center py-12 sm:py-16 px-4 sm:px-6 gap-8 bg-[#ebf9ff] rounded-t-[3rem] sm:rounded-t-[4rem] border-t-2 border-surface-container">
 <div class="flex flex-col items-center gap-3">
-<div class="text-3xl font-black text-[#b60051] font-headline tracking-tight">MEC.SID SIDOARJO</div>
+<div class="flex items-center gap-3 mb-2">
+    <img src={logoImg.src} alt="MEC.SID Logo" class="h-10 sm:h-12 w-auto" />
+    <div class="text-3xl font-black text-[#b60051] font-headline tracking-tight">SIDOARJO</div>
+</div>
 <p class="text-on-surface font-bold font-label text-base">© 2024 Pusat Belajar MEC.SID - Mari Belajar dengan Gembira!</p>
 </div>
-<div class="flex flex-wrap justify-center gap-10">
-<a class="text-on-surface font-black text-sm hover:text-primary transition-all border-b-2 border-transparent hover:border-primary" href="#">Hubungi Kami</a>
-<a class="text-on-surface font-black text-sm hover:text-primary transition-all border-b-2 border-transparent hover:border-primary" href="#">Syarat &amp; Ketentuan</a>
-<a class="text-on-surface font-black text-sm hover:text-primary transition-all border-b-2 border-transparent hover:border-primary" href="#">Kebijakan Privasi</a>
-</div>
+
 <div class="flex gap-8 mt-4">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all shadow-md border border-surface-container">
+<button onclick="if(navigator.share){navigator.share({title:document.title, url:window.location.href})}else{navigator.clipboard.writeText(window.location.href);alert('Tautan sudah disalin!');}" class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all shadow-md border border-surface-container focus:outline-none">
 <span class="material-symbols-outlined text-2xl font-bold">share</span>
-</div>
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-secondary cursor-pointer hover:bg-secondary hover:text-white transition-all shadow-md border border-surface-container">
+</button>
+<a href="https://www.instagram.com/mecsidgedangansidoarjo/" target="_blank" class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-secondary cursor-pointer hover:bg-secondary hover:text-white transition-all shadow-md border border-surface-container">
 <span class="material-symbols-outlined text-2xl font-bold">language</span>
-</div>
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-tertiary cursor-pointer hover:bg-tertiary hover:text-white transition-all shadow-md border border-surface-container">
+</a>
+<a href="https://www.google.com/maps/search/?api=1&query=MECSID+BIMBEL" target="_blank" class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-tertiary cursor-pointer hover:bg-tertiary hover:text-white transition-all shadow-md border border-surface-container">
 <span class="material-symbols-outlined text-2xl font-bold">map</span>
-</div>
+</a>
 </div>
 </footer>
 <!-- Scroll Animations Script -->
 <script is:inline>
 document.addEventListener("DOMContentLoaded", () => {
+    // 1. Scroll Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
@@ -539,9 +581,85 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.scroll-fade').forEach((el) => {
         observer.observe(el);
     });
+
+    // 2. Active Link Updates
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    function updateActiveLink(activeHref) {
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === activeHref) {
+                link.classList.remove('text-[#131e22]', 'font-semibold', 'border-transparent');
+                link.classList.add('text-[#b60051]', 'font-bold', 'border-[#b60051]');
+            } else {
+                link.classList.remove('text-[#b60051]', 'font-bold', 'border-[#b60051]');
+                link.classList.add('text-[#131e22]', 'font-semibold', 'border-transparent');
+            }
+        });
+    }
+
+    // On Click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            updateActiveLink(this.getAttribute('href'));
+        });
+    });
+
+    // On Scroll
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        if (current) {
+            updateActiveLink(`#${current}`);
+        }
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    let isMenuOpen = false;
+
+    if(mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.style.transform = 'translateY(0)';
+            } else {
+                mobileMenu.style.transform = 'translateY(-100%)';
+            }
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.style.transform = 'translateY(-100%)';
+            });
+        });
+    }
+
 });
 </script>
+<script async defer src="https://www.instagram.com/embed.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  });
+</script>
 </body></html>
+
+
+
+
+
+
 
 
 
